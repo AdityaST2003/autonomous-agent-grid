@@ -1,44 +1,40 @@
-# Project Report: 2D Autonomous Agent with Q-Learning
+Project Report: 2D Autonomous Agent with Q-Learning
 
-## 🧠 Model & Logic
+Model & Logic
 
-We used **Q-learning**, a classic reinforcement learning algorithm, to train an agent to navigate a grid:
-- **States**: agent's (x, y) location
-- **Actions**: UP, DOWN, LEFT, RIGHT
-- **Rewards**:
+We used Q-learning, a classic reinforcement learning algorithm, to train an agent to navigate a grid:
+- States: agent's (x, y) location
+- Actions: UP, DOWN, LEFT, RIGHT
+- Rewards:
   - +100 for reaching the goal
   - -1 per step (to encourage speed)
   - -100 for hitting obstacles
 
 Each episode starts at the top-left and ends on reaching the goal, hitting an obstacle, or exceeding step limit.
 
-## ⚙️ Parameters
+Parameters
 
 - Learning rate (α): 0.1
 - Discount factor (γ): 0.9
 - Exploration rate (ε): 0.2 (ε-greedy)
 
----
 
-## ⚔️ Challenges Faced
+Challenges Faced
 
 - Balancing exploration and exploitation
 - Tuning rewards so agent doesn't take forever
 - Random obstacles sometimes make the path impossible
 - Visualizing Q-values in an intuitive way
 
----
 
-## 💡 Ideas to Improve
+Ideas to Improve
 
-- Use **ε decay** over time for better convergence
-- Implement **pathfinding + RL hybrid**
-- Add **deep Q-networks (DQN)** for scaling to larger spaces
+- Use ε decay over time for better convergence
+- Implement pathfinding + RL hybrid
+- Add deep Q-networks (DQN) for scaling to larger spaces
 - Visualize Q-values as a heatmap or arrows
 - Use a fixed obstacle map for fair benchmarking
 
----
-
-## ✅ Results
+Results
 
 After 300–500 episodes, the agent typically learns to reach the goal with high success. Replay mode shows the learned policy clearly.
